@@ -161,7 +161,7 @@
 <ul>
 <li>You must specify a <code>uri</code> property, despite the documentation listing this property as optional (yeah, I know)</li>
 <li>The <code>uri</code> property should be in the format <code>https://s8events.azure-automation.net/webhooks?token=$TOKEN</code>, where <code>$TOKEN</code> is a 48-character string (the hard requirements of the string format are unclear)</li>
-<li>The <code>parameters</code> property takes the form:
+<li>The <code>parameters</code> property must be in the form:
 <code>
 {
 &quot;$PARAMETER_KEY&quot;: &quot;$PARAMETER_VALUE&quot;
@@ -176,10 +176,10 @@
   &quot;name&quot;: &quot;myWebhook&quot;,
   &quot;type&quot;: &quot;Microsoft.Automation/automationAccounts/webhooks&quot;,
   &quot;apiVersion&quot;: &quot;2015-10-31&quot;,
-  &quot;dependsOn&quot;: {
+  &quot;dependsOn&quot;: [
     &quot;[concat('Microsoft.Automation/automationAccounts/', parameters('automationAccountName'))]&quot;,
     &quot;[concat('Microsoft.Automation/automationAccounts/', parameters('automationAccountName'), '/runbooks/myRunbook')]&quot;
-  }
+  ],
   &quot;properties&quot;: {
     &quot;isEnabled&quot;: true,
     &quot;uri&quot;: &quot;[concat('https://s8events.azure-automation.net/webhooks?token=', parameters('webhookToken'))]&quot;,
