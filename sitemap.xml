@@ -3,7 +3,18 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://cmrnttrd.tech/posts/azure-automation-webhooks-arm/</loc>
+    <lastmod>2017-12-09T13:01:00+11:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://cmrnttrd.tech/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://cmrnttrd.tech/posts/</loc>
+    <lastmod>2017-12-09T13:01:00+11:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -14,6 +25,7 @@
   
   <url>
     <loc>https://cmrnttrd.tech/</loc>
+    <lastmod>2017-12-09T13:01:00+11:00</lastmod>
     <priority>0</priority>
   </url>
   
