@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>cmrnttrd</title>
-    <link>https://cameronattard.github.io/</link>
+    <link>https://cmrnttrd.tech/</link>
     <description>Recent content on cmrnttrd</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="https://cameronattard.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://cmrnttrd.tech/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>
