@@ -4,7 +4,13 @@
   
   <url>
     <loc>https://cmrnttrd.tech/posts/azure-automation-webhooks-arm/</loc>
-    <lastmod>2017-12-09T13:01:00+11:00</lastmod>
+    <lastmod>2017-12-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://cmrnttrd.tech/tags/azure/</loc>
+    <lastmod>2017-12-09T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -14,18 +20,19 @@
   
   <url>
     <loc>https://cmrnttrd.tech/posts/</loc>
-    <lastmod>2017-12-09T13:01:00+11:00</lastmod>
+    <lastmod>2017-12-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://cmrnttrd.tech/tags/</loc>
+    <lastmod>2017-12-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://cmrnttrd.tech/</loc>
-    <lastmod>2017-12-09T13:01:00+11:00</lastmod>
+    <lastmod>2017-12-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

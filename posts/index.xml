@@ -6,7 +6,7 @@
     <description>Recent content in Posts on cmrnttrd</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 09 Dec 2017 13:01:00 +1100</lastBuildDate>
+    <lastBuildDate>Sat, 09 Dec 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://cmrnttrd.tech/posts/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>Provisioning Azure Automation Webhooks via ARM Templates</title>
       <link>https://cmrnttrd.tech/posts/azure-automation-webhooks-arm/</link>
-      <pubDate>Sat, 09 Dec 2017 13:01:00 +1100</pubDate>
+      <pubDate>Sat, 09 Dec 2017 00:00:00 +0000</pubDate>
       
       <guid>https://cmrnttrd.tech/posts/azure-automation-webhooks-arm/</guid>
       <description>Coming from AWS CloudFormation, my experiences so far with Azure Resource Manager (ARM) templates have been quite positive. Microsoft&amp;rsquo;s Infrastructure-as-Code offering includes several features that CloudFormation users would kill for, like resource and property iteration and a more extensive set of functions for working with arrays and objects.
