@@ -21,5 +21,15 @@
 However, last week I encountered an issue that had me scratching my head. I was trying to provision a webhook resource to trigger an Azure Automation runbook, which has the following structure according to the ARM template reference:</description>
     </item>
     
+    <item>
+      <title>About</title>
+      <link>https://cmrnttrd.tech/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://cmrnttrd.tech/about/</guid>
+      <description>I&amp;rsquo;m a Software Engineer based in Sydney, Australia. I graduated in 2015 from Western Sydney University with a Bachelor of Computer Science and have since been working in the cloud infrastructure space.
+I&amp;rsquo;m particularly interested in distributed systems and infrastructure automation (yeah, I&amp;rsquo;m a shameless Kubernetes fanboy). In between coding sessions, you can find me nerding out about football (NFL/NRL), music, and whatever else has grabbed my attention at that given moment.</description>
+    </item>
+    
   </channel>
 </rss>
