@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on cmrnttrd</title>
-    <link>https://cmrnttrd.tech/posts/</link>
-    <description>Recent content in Posts on cmrnttrd</description>
+    <title>Prometheus on cmrnttrd</title>
+    <link>https://cmrnttrd.tech/tags/prometheus/</link>
+    <description>Recent content in Prometheus on cmrnttrd</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 11 Mar 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://cmrnttrd.tech/posts/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://cmrnttrd.tech/tags/prometheus/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -19,16 +19,6 @@
       <guid>https://cmrnttrd.tech/posts/preventing-pre-bootstrap-prometheus-alerts/</guid>
       <description>The up time series in Prometheus is incredibly useful for monitoring the availability of your targets at a high level. In its most basic form, alerting on the health of your targets looks like this:
 alert: InstanceDown expr: up == 0 for: 5m labels: - severity: page annotations: - summary: &amp;quot;Instance {{$labels.instance}} down&amp;quot; - description: &amp;quot;{{$labels.instance}} of job {{$labels.job}} has been down for more than 5 minutes.&amp;quot;  This alert will fire after Prometheus has been unable to scrape a target for 5 minutes straight.</description>
-    </item>
-    
-    <item>
-      <title>Provisioning Azure Automation Webhooks via ARM Templates</title>
-      <link>https://cmrnttrd.tech/posts/azure-automation-webhooks-arm/</link>
-      <pubDate>Sat, 09 Dec 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://cmrnttrd.tech/posts/azure-automation-webhooks-arm/</guid>
-      <description>Coming from AWS CloudFormation, my experiences so far with Azure Resource Manager (ARM) templates have been quite positive. Microsoft&amp;rsquo;s Infrastructure-as-Code offering includes several features that CloudFormation users would kill for, like resource and property iteration and a more extensive set of functions for working with arrays and objects.
-However, last week I encountered an issue that had me scratching my head. I was trying to provision a webhook resource to trigger an Azure Automation runbook, which has the following structure according to the ARM template reference:</description>
     </item>
     
   </channel>

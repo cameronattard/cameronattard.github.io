@@ -4,7 +4,7 @@
          
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Tags</title>
+        <title>Preventing Pre-Bootstrap Prometheus Alerts</title>
         <style>
 
     html body {
@@ -60,9 +60,6 @@
 <script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
  <meta name="generator" content="Hugo 0.31.1" />
         
-        <link href="https://cmrnttrd.tech/tags/index.xml" rel="alternate" type="application/rss+xml" title="cmrnttrd" />
-        <link href="https://cmrnttrd.tech/tags/index.xml" rel="feed" type="application/rss+xml" title="cmrnttrd" />
-        
         
         
         
@@ -85,7 +82,7 @@
 
                 <div class="navbar-header">
 
-                    <a class="navbar-brand visible-xs" href="#">Tags</a>
+                    <a class="navbar-brand visible-xs" href="#">Preventing Pre-Bootstrap Prometheus Alerts</a>
 
                     <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
                         <span class="icon-bar"></span>
@@ -130,9 +127,7 @@
 
 <main>
 
-    <h2>Tags</h2>
-
-     <div class="item">
+    <div class="item">
 
     
     
@@ -141,44 +136,50 @@
     
     
 
-    <h4><a href="/tags/azure/">Azure</a></h4>
-    <h5>December 9, 2017</h5>
-    
-
-</div>
-  <div class="item">
-
-    
-    
-    
-
-    
-    
-
-    <h4><a href="/tags/monitoring/">Monitoring</a></h4>
+    <h4><a href="/posts/preventing-pre-bootstrap-prometheus-alerts/">Preventing Pre-Bootstrap Prometheus Alerts</a></h4>
     <h5>March 11, 2018</h5>
-    
+     <kbd class="item-tag">Prometheus</kbd>  <kbd class="item-tag">Monitoring</kbd> 
 
 </div>
-  <div class="item">
 
-    
-    
-    
 
-    
-    
+    <br> <div class="text-justify"><p>The <code>up</code> time series in Prometheus is incredibly useful for monitoring the availability of your targets at a high level. In its most basic form, alerting on the health of your targets looks like this:</p>
 
-    <h4><a href="/tags/prometheus/">Prometheus</a></h4>
-    <h5>March 11, 2018</h5>
-    
+<pre><code>alert: InstanceDown
+expr: up == 0
+for: 5m
+labels:
+  - severity: page
+annotations:
+  - summary: &quot;Instance {{$labels.instance}} down&quot;
+  - description: &quot;{{$labels.instance}} of job {{$labels.job}} has been down for more than 5 minutes.&quot;
+</code></pre>
 
+<p>This alert will fire after Prometheus has been unable to scrape a target for 5 minutes straight. Although this works fine for containerised metrics exporters that can quickly self-heal, traditional infrastructure setups using configuration management tools like Puppet and DSC can often take longer to initialise the system in its desired state, meaning you could get paged every time your workload automatically scales out.</p>
+
+<p>In the interest of reducing alert fatigue, I set out to find a solution that will allow me to alert on unhealthy targets in a timely fashion without regular false positives from new targets. After plenty of experimenting, I came up with the following alert:</p>
+
+<pre><code>alert: InstanceDown
+expr: up == 0 and ON(instance) max_over_time(up[2w]) &gt; 0
+for: 5m
+labels:
+  - severity: page
+annotations:
+  - summary: &quot;Instance {{$labels.instance}} down&quot;
+  - description: &quot;{{$labels.instance}} of job {{$labels.job}} has been down for more than 5 minutes.&quot;
+</code></pre>
+
+<p>This alert uses vector matching via the <code>ON</code> keyword, which will match time series on both sides of the <code>and</code> operator based on the <code>instance</code> label. This means that the alert will only fire if the instance has been <code>up</code> at some point in the past two weeks, thus eliminating our unwanted pre-bootstrap alerts.</p>
 </div>
- 
+
+    
+    
+
+    
+
+    
 
 </main>
-
-
 
         <footer>
 

@@ -20,5 +20,23 @@
       <description></description>
     </item>
     
+    <item>
+      <title>Monitoring</title>
+      <link>https://cmrnttrd.tech/tags/monitoring/</link>
+      <pubDate>Sun, 11 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://cmrnttrd.tech/tags/monitoring/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Prometheus</title>
+      <link>https://cmrnttrd.tech/tags/prometheus/</link>
+      <pubDate>Sun, 11 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://cmrnttrd.tech/tags/prometheus/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

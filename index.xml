@@ -6,10 +6,20 @@
     <description>Recent content on cmrnttrd</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 09 Dec 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 11 Mar 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://cmrnttrd.tech/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Preventing Pre-Bootstrap Prometheus Alerts</title>
+      <link>https://cmrnttrd.tech/posts/preventing-pre-bootstrap-prometheus-alerts/</link>
+      <pubDate>Sun, 11 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://cmrnttrd.tech/posts/preventing-pre-bootstrap-prometheus-alerts/</guid>
+      <description>The up time series in Prometheus is incredibly useful for monitoring the availability of your targets at a high level. In its most basic form, alerting on the health of your targets looks like this:
+alert: InstanceDown expr: up == 0 for: 5m labels: - severity: page annotations: - summary: &amp;quot;Instance {{$labels.instance}} down&amp;quot; - description: &amp;quot;{{$labels.instance}} of job {{$labels.job}} has been down for more than 5 minutes.&amp;quot;  This alert will fire after Prometheus has been unable to scrape a target for 5 minutes straight.</description>
+    </item>
     
     <item>
       <title>Provisioning Azure Automation Webhooks via ARM Templates</title>
